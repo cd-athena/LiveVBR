@@ -10,4 +10,4 @@ LiveVBR is available open-source, published under the GPLv3 license.
 
 Please use "Cite this repository" to extract proper citation options for this repository or use the following:
 
-V. V. Menon, P. T. Rajendran, C. Feldmann, K. Schoeffmann, M. Ghanbari and C. Timmerer, "JND-aware Two-pass Per-title Encoding Scheme for Adaptive Live Streaming," in IEEE Transactions on Circuits and Systems for Video Technology, doi: `10.1109/TCSVT.2023.3290725 <doi.org/10.1109/TCSVT.2023.3290725>`_
+Vignesh V Menon, Prajit T Rajendran, Christian Feldmann, Klaus Schoeffmann, Mohammad Ghanbari and Christian Timmerer, "JND-aware Two-pass Per-title Encoding Scheme for Adaptive Live Streaming," in IEEE Transactions on Circuits and Systems for Video Technology, doi: `10.1109/TCSVT.2023.3290725 <doi.org/10.1109/TCSVT.2023.3290725>`_
