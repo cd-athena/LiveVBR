@@ -19,4 +19,7 @@ Although reducing the overall storage needed to store the representations, LiveV
 
 LiveVBR is available as an open source library, published under the GPLv3 license.
 
+ - [Building instructions](build.md)
+ - [CLI options](cli.md)
+
 ![ATHENA](https://athena.wp.itec.aau.at/wp-content/uploads/sites/12/2020/02/athena-logo-notagline-300x51.png)
