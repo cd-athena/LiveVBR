@@ -18,3 +18,4 @@ The following C++11 compilers have been known to work:
  * Visual Studio 2015 or later
  * GCC 4.8 or later
  * Clang 3.3 or later
+ 
