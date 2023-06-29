@@ -45,7 +45,7 @@ class LadderGenerator:
     # Function to run VCA on input video and generate necessary features
     def run_vca(self):
         # Define the command and arguments
-        command = os.path.join(self.current_directory, 'VCA', 'source', 'apps', 'vca', 'vca.exe')
+        command = os.path.join(self.current_directory, 'build', 'source', 'apps', 'vca.exe')
         csv_file = os.path.join(self.current_directory,'test.csv')
 
         # Construct the command-line arguments
