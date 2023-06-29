@@ -6,17 +6,25 @@
 
 	Input filename. Raw YUV or Y4M supported.
 
-- `--input-res <wxh>`
+- `--inputres <wxh>`
 
 	Source picture size [w x h].
+	
+- `--output <filename>`
+
+	Input filename. CSV supported. 
 
 ## Bitrate ladder generator Configuration
 
-- `--min-br <integer>` 
+- `--minbr <integer>` 
 
 	Minimum bitrate supported by the streaming service provider.
+	
+- `--codec <codec-name>` 
 
-- `--max-br <integer>` 
+	Name of the encoder/codec employed.
+
+- `--maxbr <integer>` 
 
 	Maximum bitrate supported by the streaming service provider.
 
