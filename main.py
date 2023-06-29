@@ -16,10 +16,10 @@ def main():
     parser = argparse.ArgumentParser(description='Process video with a specified resolution.')
 
     # Add arguments
-    parser.add_argument('--video', help='Path to the input video file')
-    parser.add_argument('--inputres', help='Resolution of the output video in the format WIDTHxHEIGHT')
-    parser.add_argument('--minbr', help='Minimum bitrate value')
-    parser.add_argument('--maxbr', help='Maximum bitrate value')
+    parser.add_argument('--input', help='Path to the input video file')
+    parser.add_argument('--input-res', help='Resolution of the output video in the format WIDTHxHEIGHT')
+    parser.add_argument('--min-br', help='Minimum bitrate value')
+    parser.add_argument('--max-br', help='Maximum bitrate value')
     parser.add_argument('--jnd', help='JND value- 2,4 or 6')
     
     # Parse the arguments
