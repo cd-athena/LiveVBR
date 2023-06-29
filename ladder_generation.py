@@ -188,8 +188,6 @@ class LadderGenerator:
         test_vector = [self.E_val, self.h_val, self.L_val, math.log(br_minimum)]
         br_minimum, best_res, cur_crf, max_vmaf = self.get_best_vmaf_model(br_minimum, test_vector)
         
-        # File to write the config settings according to the generated ladder
-        fh = open('.\jnd_ladder_config.txt', 'w')
         dict_ladder = {
                     'Codec': [],
                     'ID' : [],
@@ -206,14 +204,12 @@ class LadderGenerator:
           br_minimum, best_res, cur_crf = self.get_best_bitrate_model(max_vmaf, test_vector, best_res, cur_crf)
           # If maximum bitrate is not reached, write the current row of the ladder 
           if br_minimum <= self.MAX_BR:
-            fh.writelines('[id_' + str(j+1) + ':0:nil] --input ' + str(best_res) +'pSource.y4m --crf ' + str(cur_crf) +' --vbv-maxrate ' + str(round(br_minimum,2)) + ' --vbv-bufsize 48000 --strict-cbr -o hevc/out_' + str(j+1) +'.hevc --csv out_' + str(j+1) +'.csv --preset ultrafast' + '\n')
             dict_ladder['Codec'].append(self.codec)
             dict_ladder['ID'].append(j+1)
             dict_ladder['Bitrate'].append(round(br_minimum,2))
             dict_ladder['CRF'].append(cur_crf)
             j += 1
         else:
-            fh.writelines('[id_' + str(j+1) + ':0:nil] --input ' + str(best_res) +'pSource.y4m --crf ' + str(cur_crf) +' --vbv-maxrate ' + str(round(br_minimum,2)) + ' --vbv-bufsize 48000 --strict-cbr -o hevc/out_' + str(j+1) +'.hevc --csv out_' + str(j+1) +'.csv --preset ultrafast' + '\n')
             dict_ladder['Codec'].append(self.codec)
             dict_ladder['ID'].append(j+1)
             dict_ladder['Bitrate'].append(round(br_minimum,2))
@@ -229,7 +225,6 @@ class LadderGenerator:
               br_minimum, best_res, cur_crf = self.get_best_bitrate_model(max_vmaf, test_vector, best_res, cur_crf)
               if br_minimum > self.MAX_BR: # Break if the maximum bitrate is reached
                 break
-              fh.writelines('[id_' + str(j+1) + ':0:nil] --input ' + str(best_res) +'pSource.y4m --crf ' + str(cur_crf) +' --vbv-maxrate ' + str(round(br_minimum,2)) + ' --vbv-bufsize 48000 --strict-cbr -o hevc/out_' + str(j+1) +'.hevc --csv out_' + str(j+1) +'.csv --preset ultrafast' + '\n')
               dict_ladder['Codec'].append(self.codec)
               dict_ladder['ID'].append(j+1)
               dict_ladder['Bitrate'].append(round(br_minimum,2))
